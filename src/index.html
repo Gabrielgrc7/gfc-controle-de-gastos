@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#0D0E10">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GFC · Controle de gastos</title>
+<meta name="description" content="GFC: controle de gastos pessoal que funciona no navegador, lê a fatura em PDF no seu aparelho e guarda os dados só com você.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="GFC">
+<meta property="og:title" content="GFC · Controle de gastos que fica no seu aparelho">
+<meta property="og:description" content="Lê a fatura em PDF no próprio navegador, funciona sem internet e tem modo de exemplo sem cadastro.">
+<meta property="og:url" content="__SITE_URL__">
+<meta property="og:image" content="__SITE_URL__og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tela inicial do GFC mostrando o total gasto no mês, receitas, despesas e saldo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="__SITE_URL__og-image.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="259 281 732 685"><path fill="currentColor" fill-rule="evenodd" d="M618.1 960.8 C579.5 944.4 537.2 921.1 505.9 899.3 C495.3 891.9 495.3 891.9 492.2 881.7 C474.7 823.4 475.9 762.6 495.9 696.5 C497.6 691.1 498.8 686.4 498.6 686.2 C498.3 686.0 495.0 689.6 491.0 694.2 C457.1 733.6 432.6 780.6 416.0 837.8 C413.9 845.1 413.9 845.1 406.2 838.2 C388.5 822.3 357.0 787.1 357.0 783.3 C357.0 780.1 361.9 761.4 366.0 748.5 C393.1 665.4 457.8 582.8 541.7 524.4 C548.5 519.6 553.9 515.6 553.7 515.4 C553.5 515.2 547.5 517.0 540.4 519.4 C441.0 553.5 337.3 629.8 268.1 720.0 C264.1 725.2 260.5 729.6 260.1 729.8 C257.8 730.6 262.2 691.1 266.7 671.0 C290.8 561.9 362.0 471.3 476.5 404.1 C491.5 395.3 532.2 374.6 545.7 368.9 C550.3 367.1 554.0 365.3 554.0 365.0 C554.0 364.1 532.0 365.0 518.3 366.5 C470.2 371.8 419.7 390.0 367.2 420.9 C349.8 431.2 349.8 431.2 366.7 411.0 C423.3 343.4 499.4 299.3 583.0 285.6 C682.8 269.3 789.7 296.1 847.4 351.9 C869.3 373.1 874.0 385.8 866.3 402.3 C863.1 409.0 863.1 409.0 859.0 409.0 C850.9 409.0 839.1 405.7 817.0 397.3 C752.9 373.1 726.5 364.8 694.0 359.0 C672.0 355.1 636.0 351.8 636.0 353.7 C636.0 354.6 664.8 370.1 686.2 380.7 C699.0 386.9 698.8 386.7 696.5 394.4 C689.6 417.0 702.7 445.7 724.7 456.1 C728.7 458.0 731.9 459.7 731.9 460.0 C731.9 460.3 729.0 462.3 725.3 464.5 C649.1 510.6 589.4 583.6 568.4 656.2 C537.2 764.3 557.5 872.2 625.3 957.2 C629.5 962.6 632.9 967.0 632.8 967.0 C632.6 967.0 626.0 964.2 618.1 960.8 Z M838.5 964.5 C709.6 939.8 610.3 879.6 591.6 814.6 C576.0 760.9 642.7 669.5 729.3 625.9 C741.1 619.9 748.1 616.9 747.3 618.3 C746.9 619.0 744.2 623.1 741.2 627.5 C720.7 658.3 708.2 702.6 710.5 737.0 C715.5 814.2 755.5 878.8 851.0 963.8 C855.3 967.7 855.0 967.7 838.5 964.5 Z M950.4 640.5 C955.6 618.8 948.5 587.4 934.8 571.2 C901.8 532.3 798.8 519.8 697.8 542.5 C685.9 545.1 685.9 545.0 698.5 534.9 C723.1 515.0 757.8 494.9 793.3 479.9 C805.9 474.6 806.3 474.4 811.7 467.7 C818.5 459.2 842.6 431.6 853.8 419.2 C863.6 408.4 862.5 408.7 878.7 413.6 C933.3 430.1 968.5 455.9 983.0 489.9 C1000.0 529.8 992.5 581.9 963.5 624.9 C956.1 635.9 949.6 643.6 950.4 640.5 Z M862.5 462.5 C877.2 459.4 892.2 449.2 887.4 445.5 C875.7 436.7 865.2 440.9 852.2 459.7 C848.7 464.7 850.1 465.1 862.5 462.5 Z M744.2 438.4 C728.9 434.3 719.7 423.6 719.6 409.6 C719.5 399.6 722.7 398.8 735.6 405.3 C744.3 409.7 744.5 409.9 746.3 414.9 C749.1 423.0 756.1 426.0 764.9 422.9 C769.2 421.4 782.2 428.5 779.2 430.8 C769.5 438.4 755.3 441.4 744.2 438.4 Z"/></symbol></svg>
+
+<main id="auth" hidden><div class="ab">
+  <svg class="lg big" aria-label="GFC"><use href="#logo"/></svg>
+  <section id="pLogin">
+    <div><h1>Entrar</h1><p style="margin-top:6px">Acesse sua conta para continuar.</p><div class="trust" style="justify-content:flex-start;margin-top:12px"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Seus dados ficam só neste aparelho</span></div></div>
+    <form id="fLogin" class="fl">
+      <div><label for="lE">E-mail</label><input id="lE" type="email" autocomplete="email" placeholder="voce@email.com"></div>
+      <div><label for="lP">Senha</label><input id="lP" type="password" autocomplete="current-password" placeholder="Sua senha"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><label style="display:flex;gap:8px;align-items:center;margin:0;font-size:13px"><input type="checkbox" id="keep"> Manter conectado</label><button type="button" class="lk" id="forgot" style="font-size:13px">Esqueci a senha</button></div>
+      <div class="err" id="lErr"></div>
+      <button class="btn" type="submit">Entrar</button>
+    </form>
+    <div id="rstBox" hidden class="fl" style="padding:14px;border:1px dashed var(--line);border-radius:14px">
+      <p>Não dá para recuperar a senha: ela nunca é guardada (só um código irreversível) e o app não envia e-mails. Você pode apagar esta conta e todos os dados dela neste dispositivo e criá-la de novo.</p>
+      <div><label for="rstEmail">E-mail da conta</label><input id="rstEmail" type="email" autocomplete="email"></div>
+      <button type="button" class="btn danger sm" id="rstGo">Apagar conta e recomeçar</button><div class="err" id="rstMsg"></div>
+    </div>
+    <p style="text-align:center">Ainda não tem conta?</p>
+    <button class="btn ghost" id="toSign">Criar conta</button>
+    <button class="btn ghost" id="demoBtn" type="button">Ver com dados de exemplo</button>
+    <p class="mut" style="text-align:center;font-size:12px;margin-top:-4px">Sem cadastro. Os dados do exemplo são fictícios.</p>
+    <button class="lk" data-pol style="align-self:center;font-size:12px">Política de Privacidade</button>
+  </section>
+  <section id="pSign" hidden>
+    <button class="lk" id="toLogin" style="align-self:flex-start;text-decoration:none">‹ Voltar</button>
+    <div><h1>Criar conta</h1><p style="margin-top:6px">Leva menos de um minuto. A conta fica só neste aparelho.</p></div>
+    <form id="fSign" class="fl">
+      <div class="avp"><button type="button" class="av pick" id="sAvBtn" aria-label="Escolher foto de perfil">+</button><div><div style="font-size:14px">Foto de perfil</div><div class="mut">Opcional. Aparece no canto superior direito.</div></div></div>
+      <input type="file" id="sAvIn" accept="image/*" hidden>
+      <div><label for="sN">Nome</label><input id="sN" autocomplete="name" placeholder="Seu nome"></div>
+      <div><label for="sE">E-mail</label><input id="sE" type="email" autocomplete="email" placeholder="voce@email.com"></div>
+      <div><label for="sP">Senha</label><input id="sP" type="password" autocomplete="new-password" placeholder="Mínimo 6 caracteres"><div class="pwr" id="pwRules"></div></div>
+      <div><label for="sP2">Confirmar senha</label><input id="sP2" type="password" autocomplete="new-password" placeholder="Repita a senha"></div>
+      <label style="display:flex;gap:10px;align-items:flex-start;margin:0;font-size:13px;color:var(--tx)"><input type="checkbox" id="sCons" style="margin-top:3px"><span>Li e aceito a <button type="button" class="lk" data-pol style="color:var(--tx);font-size:13px">Política de Privacidade</button> e declaro ter 18 anos ou mais.</span></label>
+      <div class="err" id="sErr"></div>
+      <button class="btn" type="submit">Criar conta</button>
+    </form>
+    <p style="text-align:center">Já tem conta? <button class="lk" id="toLogin2" style="color:var(--tx)">Entrar</button></p>
+  </section>
+</div></main>
+
+<div id="saveWarn" hidden role="alert"><span id="saveWarnTx"></span><button type="button" id="saveWarnBtn">Baixar backup</button></div>
+<div id="app" hidden>
+<div class="wrap">
+  <div class="ban" id="demoBar" hidden><span>Você está vendo <b>dados de exemplo</b> (fictícios). Nada aqui é seu.</span><span class="row"><button class="lk" id="demoMake" type="button">Criar minha conta</button><button class="lk" id="demoOut" type="button">Sair</button></span></div>
+  <header class="top">
+    <button class="brand" id="brandBtn" aria-label="Ir para o início"><svg class="lg" aria-hidden="true"><use href="#logo"/></svg><span>GFC</span></button>
+    <div class="avw">
+      <button class="ib" id="eyeBtn" aria-label="Ocultar valores"></button>
+      <button class="av" id="avBtn" aria-label="Menu da conta" aria-haspopup="true" aria-expanded="false"></button>
+      <div class="menu" id="menu" hidden>
+        <div class="mh"><div class="av md" id="mAv"></div><div style="min-width:0"><div class="mn" id="mName"></div><div class="mut" id="mMail" style="overflow:hidden;text-overflow:ellipsis"></div></div></div>
+        <button class="mi" id="mCfg"><span>Configurações</span><span class="mut">›</span></button>
+        <button class="mi" id="mView" aria-haspopup="dialog"><span>Modo de visualização</span><span class="mut" id="mViewV">Completa</span></button>
+        <button class="mi" id="mTheme"><span>Tema</span><span class="mut" id="mThemeV">Escuro</span></button>
+        <button class="mi" id="mLock" hidden><span>Bloquear agora</span></button>
+        <button class="mi" id="out"><span>Sair</span></button>
+      </div>
+    </div>
+  </header>
+  <div id="hdrMonth"><div class="mbar" id="mbar"><button class="ib" id="prev" aria-label="Mês anterior">‹</button><button class="mlab" id="mLabel" aria-label="Escolher mês e ano"></button><button class="ib" id="next" aria-label="Próximo mês">›</button><input type="month" id="month" hidden></div></div>
+  <section data-v="inicio">
+    <div class="ban" id="bkNudge" hidden><span id="bkNudgeTx"></span><span class="row"><button class="lk" id="bkNudgeGo" type="button">Fazer backup</button><button class="lk" id="bkNudgeLater" type="button">Depois</button></span></div>
+    <div id="onb"></div>
+    <div class="ban" id="revBan" hidden><span id="revBanT"></span><button class="btn ghost sm" id="revBanGo" style="margin-left:8px">Revisar</button></div>
+    <div id="home" data-mode="completa">
+      <div class="hw" data-w="resumo">
+        <div class="card hero">
+          <div class="l" id="heroL">Total gasto no mês</div>
+          <div class="big-v" id="kTotal">–</div>
+          <div class="mut" id="kDelta">&nbsp;</div>
+          <div class="bar" id="bar"><i style="width:0"></i></div>
+          <div class="mut" id="budNote"></div>
+        </div>
+      </div>
+      <div class="hw" data-w="fluxo" id="w-fluxo"></div>
+      <div class="hw" data-w="comprometida" id="w-comprometida"></div>
+      <div class="hw" data-w="avisos" id="w-avisos"></div>
+      <div class="hw" data-w="contas" id="w-contas"></div>
+      <div class="hw" data-w="dicas" id="w-dicas"></div>
+      <div class="hw" data-w="sonhos" id="w-sonhos"></div>
+      <div class="hw" data-w="graficos">
+        <div class="sec"><h3>Para onde foi seu dinheiro</h3></div>
+        <div class="card">
+          <div class="seg sm" id="chSeg"><button data-ch="rosca">Rosca</button><button data-ch="barras">Barras</button><button data-ch="linha">Linha</button><button data-ch="semana">Semana</button></div>
+          <div id="pie"></div>
+        </div>
+      </div>
+      <div class="hw" data-w="indicadores">
+        <div class="k3">
+          <div><div class="l">Lançamentos</div><div class="v" id="kCount">–</div><div class="s" id="kAvgEntry">&nbsp;</div></div>
+          <div><div class="l">Média por dia</div><div class="v" id="kDay">–</div><div class="s" id="kProj">&nbsp;</div></div>
+          <div><div class="l">Maior categoria</div><div class="v" id="kTop">–</div><div class="s" id="kTopV">&nbsp;</div></div>
+        </div>
+      </div>
+      <div class="hw" data-w="recentes">
+        <div class="sec"><h3>Últimos lançamentos</h3><button class="lk" data-go="lista">Ver todos</button></div>
+        <div class="card"><div id="recent"></div></div>
+      </div>
+      <div class="hw" data-w="diario" id="w-diario" hidden></div>
+      <div class="hw" data-w="maiores" id="w-maiores" hidden></div>
+      <div class="hw" data-w="vencimentos" id="w-vencimentos" hidden></div>
+      <div class="hw" data-w="assinaturas" id="w-assinaturas" hidden></div>
+      <div class="hw" data-w="cartoes" id="w-cartoes" hidden></div>
+      <div class="hw" data-w="evolucao" id="w-evolucao" hidden></div>
+      <div class="hw" data-w="atalhos" id="w-atalhos" hidden></div>
+    </div>
+    <div class="card" id="homeEmpty" hidden>
+      <div class="note">Nenhum bloco está visível no Início.</div>
+      <div class="row" style="margin-top:10px"><button class="btn ghost sm" id="homeEmptyBtn" type="button">Personalizar o Início</button></div>
+    </div>
+    <div style="text-align:center;margin-top:16px"><button class="lk" data-go="rel" style="color:var(--ac);text-decoration:none;font-weight:500">Ver relatório completo</button></div>
+    <div class="trust"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Seus dados ficam só neste aparelho · <button class="lk" data-pol style="font-size:12.5px">Privacidade</button></span></div>
+  </section>
+
+  <section data-v="lanc" hidden>
+    <div class="seg" id="seg"><button data-s="hist" class="on">Histórico</button><button data-s="comp">Compromissos</button><button data-s="imp">Importar</button></div>
+
+    <div data-s="novo">
+      <div class="sheet-h"><button class="ib" id="sheetClose" aria-label="Fechar" data-hint="Fechar">×</button><b id="sheetT">Novo lançamento</b></div>
+      <div class="card">
+        <h2 id="formTitle">Novo lançamento</h2>
+        <div class="fl">
+          <div id="tipoW"><div class="seg sm" id="tipoSeg" style="margin:0"><button type="button" data-ty="d" class="on">Despesa</button><button type="button" data-ty="i">Receita</button></div></div>
+          <div><label for="fVal" id="fValL">Valor (R$)</label><input id="fVal" inputmode="numeric" value="0,00"><div class="mut" style="font-size:12px;margin-top:5px">Digite só os números: os centavos entram primeiro (857 vira 8,57).</div></div>
+          <div><label for="fDesc">Descrição</label><input id="fDesc" placeholder="Ex.: Mercado" maxlength="60"></div>
+          <div><label for="fDate">Data</label><input type="date" id="fDate"></div>
+          <div><label>Categoria</label><div class="chips" id="chips"></div><select id="fCat" hidden></select><div class="mut" id="catHint"></div>
+            </div>
+          <div id="kindW"><label>Tipo de lançamento</label><div class="seg sm" id="kindSeg" style="margin:0"><button type="button" data-k="v" class="on">À vista</button><button type="button" data-k="p">Parcelado</button><button type="button" data-k="r">Recorrente</button></div></div>
+          <div id="pFields" hidden><div class="row" style="flex-wrap:nowrap"><div style="flex:1"><label for="fPn">Parcela atual</label><input id="fPn" type="number" min="1" max="120" inputmode="numeric" value="1"></div><div style="flex:1"><label for="fPt">Total de parcelas</label><input id="fPt" type="number" min="2" max="120" inputmode="numeric" placeholder="Ex.: 10"></div></div></div>
+          <div id="rFields" hidden><label for="fEnd">Até (opcional)</label><input id="fEnd" type="month"></div>
+          <div class="mut" id="kPrev" style="min-height:18px"></div>
+          <details id="moreW"><summary class="mut" style="cursor:pointer">Mais opções</summary><div class="fl" style="margin-top:12px">
+            <div><label for="fForma">Forma de pagamento</label><select id="fForma"><option value="">Não informar</option><option>Cartão de crédito</option><option>Cartão de débito</option><option>Pix</option><option>Dinheiro</option><option>Boleto / débito automático</option><option>Outro</option></select></div>
+            <div><label for="fCard">Cartão ou conta</label><input id="fCard" maxlength="30" placeholder="Ex.: Nubank" list="cardList"><datalist id="cardList"></datalist></div>
+            <div><label for="fFm">Mês da fatura (cartão de crédito)</label><input id="fFm" type="month"></div>
+            <div><label for="fQuem">Quem gastou</label><input id="fQuem" maxlength="30" list="quemList" placeholder="Ex.: Eu, Maria"><datalist id="quemList"></datalist></div>
+            <div><label for="fTag">Etiqueta</label><input id="fTag" maxlength="30" placeholder="Ex.: viagem, reforma"></div>
+            <label style="display:flex;gap:8px;align-items:center;margin:0;color:var(--tx);font-size:14px"><input type="checkbox" id="fPend" style="width:auto"> Conta a pagar (ainda não paguei)</label></div></details>
+          <div class="row"><button class="btn" id="save">Adicionar</button><button class="btn ghost" id="cancel" hidden>Cancelar</button></div>
+          <div class="err" id="err"></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-s="imp" hidden>
+      <div class="card">
+        <h2>Fatura do cartão (PDF)</h2>
+        <p class="mut" style="margin:0 0 6px">Escolha o banco, selecione o PDF e clique em Ler fatura. Você confere tudo antes de salvar.</p>
+        <div class="fl">
+          <div class="step"><b>1</b><div><label for="bank">Banco</label><select id="bank"><option value="nubank">Nubank</option><option value="nomad">Nomad</option><option value="generic">Outro banco (leitor genérico, confira tudo)</option></select></div></div>
+          <div class="step"><b>2</b><div><label for="pdf">Arquivo da fatura</label><input type="file" id="pdf" accept="application/pdf"></div></div>
+          <div class="step"><b>3</b><div><label for="pw">Senha do PDF (só se tiver)</label><input type="password" id="pw" autocomplete="off"></div></div>
+          <button class="btn" id="read">Ler fatura</button>
+        </div>
+        <div class="msg" id="impMsg"></div>
+        <div id="rev" hidden style="margin-top:14px">
+          <div class="note" id="revChk" style="margin:0 0 4px"></div>
+          <div class="note" id="revSum" style="margin:0 0 8px"></div>
+          <div class="row" style="margin-bottom:10px"><button class="btn ghost sm" id="revSelAll">Selecionar todos</button><button class="btn ghost sm" id="revNone">Limpar seleção</button></div>
+          <div class="note" style="margin:0 0 8px">Selecionar todos também marca itens estornados ou possíveis duplicados.</div>
+          <div class="tbl"><table><thead><tr><th></th><th>Data</th><th>Descrição</th><th>Categoria</th><th class="r">Valor</th><th></th></tr></thead><tbody id="revRows"></tbody></table></div>
+          <div class="row" style="margin-top:14px"><button class="btn" id="revAdd">Adicionar selecionados</button><button class="btn ghost" id="revCancel">Cancelar</button></div>
+        </div>
+        <div class="note">A leitura acontece no seu navegador: o arquivo não é enviado a nenhum servidor.</div>
+      </div>
+      <div class="card">
+        <h2>Extrato do banco (OFX ou CSV)</h2>
+        <p class="mut" style="margin:0 0 12px">Baixe o extrato no app ou site do banco e escolha o arquivo. Entradas viram receitas e saídas viram despesas. Você confere tudo antes de salvar.</p>
+        <div class="fl"><div><label for="xfile">Arquivo do extrato</label><input type="file" id="xfile" accept=".ofx,.csv,text/csv,application/x-ofx"></div><button class="btn" id="xread">Ler extrato</button></div>
+        <div class="msg" id="xMsg"></div>
+      </div>
+      <details class="card">
+        <summary>Importar lista de gastos (texto)</summary>
+        <p class="note" style="margin:10px 0">Cole uma entrada por linha no formato <b>descrição - R$ valor</b>. A categoria é sugerida e pode ser ajustada depois.</p>
+        <textarea id="iText" rows="6" placeholder="Mercado - R$ 54,90&#10;Uber - R$ 23"></textarea>
+        <div class="row" style="margin-top:12px;align-items:flex-end">
+          <div style="width:170px"><label for="iDate">Data para todas</label><input type="date" id="iDate"></div>
+          <button class="btn" id="imp">Importar</button>
+        </div>
+        <div class="msg" id="iMsg"></div>
+      </details>
+    </div>
+
+    <div data-s="hist" hidden>
+      <div class="card">
+        <div id="slotHist"></div>
+        <div class="hsum" id="listTot" hidden>
+          <div><div class="mut" id="listN"></div><div class="hsv" id="listV"></div></div>
+          <select id="srt" aria-label="Ordenar"><option value="r">Mais recentes</option><option value="o">Mais antigos</option><option value="v">Maior valor</option><option value="m">Menor valor</option><option value="a">Descrição (A–Z)</option></select>
+        </div>
+        <input id="q" placeholder="Buscar descrição" aria-label="Buscar" style="margin:14px 0 12px">
+        <select id="fc" hidden aria-label="Filtrar categoria"></select>
+        <div class="chips fch" id="fch"></div>
+        <div class="row" style="margin:14px 0 6px">
+          <button class="btn ghost sm" id="mEdit">Editar</button>
+          <button class="btn ghost sm" id="mDel">Apagar</button>
+          <button class="btn ghost sm" id="mCat">Categoria</button>
+        </div>
+        <div class="note" id="mHint" style="margin:0 0 6px"></div>
+        <div id="rows"></div><span id="thSel" hidden></span>
+        <div id="selBar" hidden><div class="sbi"><span id="selN" class="mut"></span><span id="catBar" hidden style="display:contents"><select id="mCatSel" aria-label="Nova categoria"></select><button class="btn sm" id="mCatGo">Aplicar</button></span><button class="btn ghost sm" id="mAll" hidden>Selecionar todos</button><button class="btn danger sm" id="mGo" hidden></button><button class="btn sm" id="mCancel">Concluir</button></div></div>
+        <div class="empty" id="none" hidden>Nenhum lançamento neste período.</div>
+        <div class="row" style="margin-top:14px"><span class="mut">Exportar:</span><button class="lk" id="expM" hidden>mês</button><button class="lk" id="expA" hidden>tudo</button><span class="note" id="expMsg" style="margin:0"></span></div>
+      </div>
+    </div>
+    <div data-s="comp" hidden><div id="compBox"></div></div>
+  </section>
+
+  <section data-v="agenda" hidden>
+    <h1 class="pt" style="margin-top:4px">Agenda</h1>
+    <div id="slotAgenda"></div>
+    <div class="card">
+      <div class="cal-w"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span></div>
+      <div class="cal" id="calGrid"></div>
+      <div class="cal-leg"><span><i style="background:var(--c3)"></i>Despesas</span><span><i style="background:var(--logo)"></i>Receitas</span><span><i style="background:var(--c2)"></i>A pagar</span><span><i style="background:var(--bad)"></i>Atrasada</span><span><i style="background:var(--mute)"></i>Paga</span><span><i style="background:var(--c5)"></i>Fatura</span></div>
+      <div class="note" id="calSum"></div>
+    </div>
+    <div class="card" id="dayBox"></div>
+  </section>
+
+  <section data-v="rel" hidden>
+    <div class="row" style="justify-content:space-between"><button class="back" data-go="inicio">‹ Início</button><button class="btn ghost sm" id="relPrint">Imprimir / PDF</button></div><h1 class="pt">Relatórios</h1>
+    <div class="card" id="relK"></div>
+    <div class="card"><div class="row" style="margin-bottom:12px"><select id="relG" style="width:auto"><option value="cat">Por categoria</option><option value="forma">Por forma de pagamento</option><option value="cartao">Por cartão</option><option value="quem">Por pessoa</option><option value="tag">Por etiqueta</option></select><select id="relN" style="width:auto"><option value="3">3 meses</option><option value="6" selected>6 meses</option><option value="12">12 meses</option><option value="ano">Este ano</option><option value="tudo">Todo o período</option></select></div><div class="tbl" id="relT"></div></div>
+    <div class="card"><h2>Maiores gastos por descrição</h2><div id="relTop"></div></div>
+  </section>
+
+  <section data-v="config" hidden>
+    <div data-p="">
+      <h1 class="pt" style="margin-top:4px">Configurações</h1>
+      <div class="ll">
+        <button class="lr" data-pg="perfil"><div><div class="lt">Perfil</div><div class="mut">Nome e foto</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="tema"><div><div class="lt">Aparência</div><div class="mut">Tema claro ou escuro</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="metas"><div><div class="lt">Metas</div><div class="mut">Limite do mês e por categoria</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="accts"><div><div class="lt">Contas e saldos</div><div class="mut">Quanto você tem em cada conta</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="cards"><div><div class="lt">Cartões e faturas</div><div class="mut">Limite, fechamento e vencimento</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="goals"><div><div class="lt">Sonhos</div><div class="mut">Metas de economia</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="cats"><div><div class="lt">Categorias</div><div class="mut">Crie e organize do seu jeito</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="rules"><div><div class="lt">Regras de categoria</div><div class="mut">O que o app aprendeu com você</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="prefs"><div><div class="lt">Preferências</div><div class="mut">Como contar o mês do cartão</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="dados"><div><div class="lt">Dados</div><div class="mut">Backup, exportar e limpar</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="priv"><div><div class="lt">Privacidade e LGPD</div><div class="mut">Seus direitos e seus dados</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="seg"><div><div class="lt">Segurança</div><div class="mut">Senha e exclusão da conta</div></div><span class="mut">›</span></button>
+        <button class="lr" data-pg="sobre"><div><div class="lt">Sobre e ajuda</div><div class="mut">Versão, privacidade e dicas</div></div><span class="mut">›</span></button>
+      </div>
+      <div class="ll" style="margin-top:14px"><button class="lr" id="cfgOut" style="color:var(--bad)"><div class="lt">Sair da conta</div></button></div>
+    </div>
+
+    <div data-p="perfil" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Perfil</h1>
+      <div class="card"><div class="prof"><div class="av xl" id="cfgAv"></div><div style="min-width:0"><div class="mn" id="cfgName"></div><div class="mut" id="cfgMail" style="margin-bottom:10px;overflow:hidden;text-overflow:ellipsis"></div><button class="btn ghost sm" id="cfgAvBtn">Trocar foto</button></div></div><input type="file" id="cfgAvIn" accept="image/*" hidden></div>
+      <div class="card"><label for="cfgNameIn">Nome</label><input id="cfgNameIn" maxlength="40"><div class="row" style="margin-top:12px"><button class="btn sm" id="cfgNameSave">Salvar nome</button></div><div class="msg" id="cfgNameMsg"></div></div>
+    </div>
+
+    <div data-p="tema" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Aparência</h1>
+      <div class="card"><label>Tema do aplicativo</label><div class="seg" id="thSeg" style="margin:0"><button data-t="dark">Escuro</button><button data-t="light">Claro</button></div></div>
+    </div>
+
+    <div data-p="metas" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Metas</h1>
+      <div id="slotMetas"></div>
+      <div class="card">
+        <label for="budget" id="bLabel">Limite do mês</label>
+        <input id="budget" inputmode="decimal" placeholder="Opcional">
+        <div class="note">O andamento aparece na tela Início.</div>
+      </div>
+      <div class="card"><h2>Limite por categoria</h2><div id="catLim"></div></div>
+    </div>
+
+    <div data-p="accts" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Contas e saldos</h1>
+      <div class="card"><h2>Nova conta</h2><div class="fl"><div><label for="acN">Nome</label><input id="acN" maxlength="30" placeholder="Ex.: Conta corrente, Carteira"></div><div><label for="acI">Saldo inicial (R$)</label><input id="acI" inputmode="decimal" placeholder="0,00"></div><div class="row"><button class="btn sm" id="acAdd">Cadastrar conta</button></div></div><div class="msg" id="acMsg"></div></div>
+      <div class="card"><h2>Suas contas</h2><div id="acBox"></div><div class="note">O saldo soma o saldo inicial, as receitas e desconta as despesas pagas que têm o nome da conta em "Cartão ou conta". Compras no crédito entram na fatura, não no saldo.</div></div>
+    </div>
+
+    <div data-p="cards" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Cartões e faturas</h1>
+      <div class="card"><h2>Novo cartão</h2><div class="fl"><div><label for="cdN">Nome</label><input id="cdN" maxlength="30" placeholder="Ex.: Nubank"></div><div><label for="cdLim">Limite (R$, opcional)</label><input id="cdLim" inputmode="decimal"></div>
+        <div class="row" style="flex-wrap:nowrap"><div style="flex:1"><label for="cdF">Dia do fechamento</label><input id="cdF" type="number" min="1" max="31" inputmode="numeric"></div><div style="flex:1"><label for="cdV">Dia do vencimento</label><input id="cdV" type="number" min="1" max="31" inputmode="numeric"></div></div>
+        <div class="row"><button class="btn sm" id="cdAdd">Cadastrar cartão</button></div></div><div class="msg" id="cdMsg"></div></div>
+      <div class="card"><h2>Seus cartões</h2><div id="cdBox"></div><div class="note">As compras no crédito com o mesmo nome do cartão entram na fatura certa pelo dia de fechamento.</div></div>
+    </div>
+
+    <div data-p="goals" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Sonhos</h1>
+      <div class="card"><h2>Novo sonho</h2><div class="fl"><div><label for="gN">Nome</label><input id="gN" maxlength="30" placeholder="Ex.: Viagem, reserva de emergência"></div><div><label for="gA">Quanto quer juntar (R$)</label><input id="gA" inputmode="decimal"></div><div><label for="gP">Até quando (opcional)</label><input id="gP" type="month"></div><div class="row"><button class="btn sm" id="gAdd">Criar sonho</button></div></div><div class="msg" id="gMsg"></div></div>
+      <div class="card"><h2>Seus sonhos</h2><div id="gBox"></div></div>
+    </div>
+
+    <div data-p="rules" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Regras de categoria</h1>
+      <div class="card"><div id="rBox"></div><div class="row" style="margin-top:12px"><button class="btn ghost sm" id="rApply">Aplicar nos itens "A revisar"</button></div><div class="msg" id="rMsg"></div></div>
+    </div>
+
+    <div data-p="cats" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Categorias</h1>
+      <div class="card"><h2>Nova categoria</h2><div class="fl"><div><label for="cgName">Nome</label><input id="cgName" maxlength="30" placeholder="Ex.: Cursos do Lucas"></div><div><label>Cor</label><div class="sw" id="cgSw"></div></div><div class="row"><button class="btn sm" id="cgAdd">Criar categoria</button></div></div><div class="msg" id="cgMsg"></div></div>
+      <div class="card"><h2>Suas categorias</h2><div id="cgList"></div><div class="note">Toque na bolinha para trocar a cor. Ao excluir uma categoria, os lançamentos dela passam para "Outros".</div></div>
+    </div>
+
+    <div data-p="prefs" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Preferências</h1>
+      <div class="card"><label>Em qual mês contar os gastos de cartão?</label><div class="seg" id="crSeg" style="margin:0"><button data-cr="0">Data da compra</button><button data-cr="1">Mês da fatura</button></div><div class="note">"Mês da fatura" (regime de caixa) conta o gasto no mês em que a fatura vence, como no seu controle de caixa. Faturas importadas já trazem esse mês; nos lançamentos manuais, informe em Mais opções.</div></div>
+      <div class="card"><label>Dicas nas telas</label><div class="seg" id="tipSeg" style="margin:0"><button data-tp="1">Ligadas</button><button data-tp="0">Desligadas</button></div><div class="note">Mostra uma explicação curta no alto de cada tela. Feche cada uma no ×.</div></div>
+    </div>
+
+    <div data-p="priv" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Privacidade e LGPD</h1>
+      <div class="card"><p class="mut" style="margin:0 0 12px;font-size:13px">Seus dados ficam somente neste dispositivo. Nada é enviado a servidores, e não há rastreamento nem compartilhamento com terceiros.</p><div class="mut" id="privInfo" style="margin-bottom:12px"></div><button class="btn ghost sm" data-pol>Ler a Política de Privacidade</button></div>
+      <div class="card"><h2>Seus direitos</h2>
+        <div class="rw"><div><div class="lt">Acesso e portabilidade</div><div class="mut">Baixe uma cópia de todos os seus dados.</div></div><button class="btn ghost sm" id="myData">Baixar</button></div>
+        <div class="rw"><div><div class="lt">Correção</div><div class="mut">Edite seu perfil e seus lançamentos quando quiser.</div></div><button class="btn ghost sm" data-pg="perfil">Perfil</button></div>
+        <div class="rw"><div><div class="lt">Eliminação e revogação</div><div class="mut">Apaga sua conta e todos os dados e revoga o consentimento.</div></div></div>
+        <div style="margin-top:8px"><button class="lk" id="delAcc2" style="color:var(--bad)">Excluir minha conta e todos os dados</button></div>
+        <div class="msg" id="privMsg"></div></div>
+    </div>
+
+    <div data-p="dados" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Dados</h1>
+      <div class="card"><h2>Onde seus dados ficam</h2><div id="storInfo" class="note">Carregando...</div></div>
+      <div class="card">
+        <h2>Backup</h2>
+        <div class="row"><button class="btn ghost sm" id="bkExp" hidden>Baixar backup</button>
+          <label class="btn ghost sm" style="display:inline-flex;align-items:center;margin:0;cursor:pointer;color:var(--tx);font-size:14px">Restaurar backup<input type="file" id="bkImp" accept="application/json" hidden></label></div>
+        <div class="note" id="bkMsg">O backup não é criptografado e contém seus dados pessoais. Guarde em local seguro.</div>
+      </div>
+      <div class="card"><h2>Exportar</h2><button class="btn ghost sm" id="cfgExp" hidden>Exportar tudo (CSV)</button><div class="note">Abre em Excel ou Google Planilhas.</div></div>
+      <div class="card"><h2>Lixeira</h2><div id="trBox"></div><div class="row" style="margin-top:10px"><button class="lk" id="trEmpty" style="color:var(--bad)">Esvaziar lixeira</button></div><div class="note">Itens apagados ficam aqui por até 30 dias.</div></div>
+      <div class="card"><h2>Limpar</h2><button class="lk" id="clrAll" style="color:var(--bad)">Apagar todos os lançamentos</button><div class="note">Mantém sua conta e as metas.</div></div>
+    </div>
+
+    <div data-p="seg" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Segurança</h1>
+      <div class="card"><h2>Alterar senha</h2><div class="fl">
+        <div><label for="pwOld">Senha atual</label><input id="pwOld" type="password" autocomplete="current-password"></div>
+        <div><label for="pwNew">Nova senha</label><input id="pwNew" type="password" autocomplete="new-password" placeholder="Mín. 6, com maiúscula, número e símbolo"></div>
+        <div><label for="pwNew2">Confirmar nova senha</label><input id="pwNew2" type="password" autocomplete="new-password"></div>
+        <div class="row"><button class="btn sm" id="pwSave">Alterar senha</button></div></div><div class="msg" id="pwMsg"></div></div>
+      <div class="card"><h2>Bloqueio por PIN</h2><div class="mut" id="pinState" style="margin-bottom:12px"></div>
+        <div id="pinOnW" class="fl"><div><label for="pinNew">Novo PIN (4 a 6 números)</label><input id="pinNew" type="password" inputmode="numeric" maxlength="6" autocomplete="off"></div><div><label for="pinNew2">Confirmar PIN</label><input id="pinNew2" type="password" inputmode="numeric" maxlength="6" autocomplete="off"></div><div class="row"><button class="btn sm" id="pinSet">Ativar bloqueio</button></div></div>
+        <div id="pinOffW" class="fl" hidden><div><label for="pinCur">PIN atual</label><input id="pinCur" type="password" inputmode="numeric" maxlength="6" autocomplete="off"></div><div class="row"><button class="btn ghost sm" id="pinOff">Desativar bloqueio</button></div></div>
+        <div class="msg" id="pinMsg"></div><div class="note">O app bloqueia sozinho após 2 minutos sem uso ou ao voltar de outra aba. Depois de 5 PINs errados, a conta é encerrada neste aparelho.</div></div>
+      <div class="card"><h2>Excluir conta</h2><button class="lk" id="delAcc" style="color:var(--bad)">Excluir minha conta e todos os dados</button><div class="note">Esta ação não pode ser desfeita.</div></div>
+    </div>
+
+    <div data-p="sobre" hidden>
+      <button class="back" data-pb>‹ Configurações</button><h1 class="pt">Sobre e ajuda</h1>
+      <div class="card"><div class="lt">GFC · Controle de gastos</div><div class="mut" style="margin-top:4px">Versão 1.0</div>
+        <div class="row" style="margin-top:12px"><button class="btn ghost sm" id="tourRestart" type="button">Rever tutorial</button></div>
+        <p class="mut" style="margin:14px 0 0;font-size:13px">Seus dados ficam apenas neste navegador e nenhuma informação é enviada a servidores. Faça backup em Configurações, Dados.</p></div>
+      <div class="card"><h2>Dicas</h2>
+        <p class="mut" style="margin:0 0 10px;font-size:13px"><b style="color:var(--tx)">Importar fatura:</b> em Lançamento, Importar, escolha o banco e o PDF baixado direto do app do banco.</p>
+        <p class="mut" style="margin:0 0 10px;font-size:13px"><b style="color:var(--tx)">Gráficos:</b> em Início, alterne entre rosca, barras, linha e semana. Passe o mouse (ou toque) para ver os valores.</p>
+        <p class="mut" style="margin:0;font-size:13px"><b style="color:var(--tx)">Metas:</b> defina o limite do mês e por categoria; a barra fica vermelha ao ultrapassar.</p></div>
+    </div>
+  </section>
+</div>
+<button id="aiBtn" aria-label="Abrir assistente" data-hint="Assistente: lance gastos conversando"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/><path d="M8 11h8M8 14.5h5"/></svg></button>
+<div id="aiPanel" hidden role="dialog" aria-label="Assistente GFC">
+  <div class="ai-h"><div class="aiav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/></svg></div><div style="flex:1;min-width:0"><div class="mn">Assistente GFC</div><div class="mut" style="font-size:12px">Funciona no seu aparelho. Nada sai daqui.</div></div><button class="ib" id="aiClose" aria-label="Fechar assistente">×</button></div>
+  <div class="ai-m" id="aiMsgs" aria-live="polite"></div>
+  <div class="ai-chips" id="aiChips"></div>
+  <form class="ai-f" id="aiForm"><input id="aiIn" placeholder="Ex.: gastei 45 no mercado" autocomplete="off" maxlength="300" aria-label="Mensagem para o assistente"><button class="btn sm" type="submit">Enviar</button></form>
+</div>
+<nav class="nav" aria-label="Principal">
+  <button class="nv on" data-go="inicio"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></svg>Início</button>
+  <button class="nv" data-go="lanc"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Lançamentos</button>
+  <button class="fab" id="fabNew" aria-label="Novo lançamento" data-hint="Novo lançamento"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+  <button class="nv" data-go="agenda"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Agenda</button>
+  <button class="nv" data-go="config"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg>Mais</button>
+</nav>
+</div>
+
+<div id="cdlg" hidden role="dialog" aria-modal="true" aria-labelledby="cdT"><div class="box">
+  <div style="display:flex;align-items:center;gap:10px"><span class="dot" id="cdDot" style="width:12px;height:12px;border-radius:4px"></span><div id="cdT" style="font-size:18px;font-weight:600"></div></div>
+  <div class="note" id="cdSub" style="margin-top:6px"></div>
+  <div id="cdList"></div>
+  <div class="row"><button class="btn" id="cdGo">Ver no histórico</button><button class="btn ghost" id="cdClose">Fechar</button></div>
+</div></div>
+<div id="pdlg" hidden role="dialog" aria-modal="true" aria-labelledby="pdT"><div class="box"><div id="pdT" style="font-size:18px;font-weight:600">Política de Privacidade</div><div class="note" id="pdV" style="margin-top:4px"></div><div id="pdBody"></div><div class="row"><button class="btn" id="pdClose">Fechar</button></div></div></div>
+<div id="cons" hidden role="dialog" aria-modal="true"><div class="box" style="max-width:440px"><div style="font-size:18px;font-weight:600">Atualização de privacidade</div><p class="mut" style="font-size:13px;margin:8px 0 16px">Para continuar, leia e aceite a Política de Privacidade (LGPD). Seus dados continuam somente neste dispositivo.</p><div class="row"><button class="btn" id="consYes">Aceitar e continuar</button><button class="btn ghost" data-pol>Ler política</button><button class="btn ghost" id="consNo">Sair</button></div></div></div>
+<div id="lock" hidden role="dialog" aria-modal="true" aria-label="App bloqueado"><form class="lbox" id="lockForm"><svg class="lg" style="width:56px;height:52px;align-self:center" aria-hidden="true"><use href="#logo"/></svg><div style="font-size:20px;font-weight:650">App bloqueado</div><div class="mut">Digite seu PIN para continuar.</div><input id="lockIn" type="password" inputmode="numeric" autocomplete="off" maxlength="6" aria-label="PIN"><div class="err" id="lockMsg"></div><button class="btn" type="submit">Desbloquear</button><button class="lk" type="button" id="lockOut">Sair da conta</button></form></div>
+<div id="mpick" hidden role="dialog" aria-modal="true" aria-label="Escolher mês e ano"><div class="box"><div class="mp-h"><button class="ib" id="mpPrev" aria-label="Ano anterior">‹</button><b id="mpYear"></b><button class="ib" id="mpNext" aria-label="Próximo ano">›</button></div><div class="mp-g" id="mpGrid"></div><div class="row" style="margin-top:16px"><button class="btn ghost sm" id="mpToday">Hoje</button><button class="btn sm" id="mpClose">Fechar</button></div></div></div>
+<div id="tour" hidden role="dialog" aria-modal="true" aria-label="Tutorial do GFC">
+  <div class="tour-b" id="tourT"></div><div class="tour-b" id="tourB"></div><div class="tour-b" id="tourL"></div><div class="tour-b" id="tourR"></div>
+  <div id="tourHole"></div><div id="tourRing"></div>
+  <div id="tourCard" aria-live="polite">
+    <div class="mut" id="tourN"></div>
+    <div id="tourTitle"></div>
+    <div id="tourText"></div>
+    <div class="mut" id="tourHint"></div>
+    <div class="row" style="margin-top:14px;justify-content:space-between"><button class="lk" id="tourSkip" type="button">Pular tutorial</button><span class="row"><button class="btn ghost sm" id="tourBack" type="button">Voltar</button><button class="btn sm" id="tourNext" type="button">Próximo</button></span></div>
+  </div>
+</div>
+<div id="welcome" hidden aria-live="polite"><div id="wBg"></div><svg class="lg" id="wLogo" aria-hidden="true"><use href="#logo"/></svg><div id="wText"><div class="mut" style="font-size:15px">Bem-vindo(a)</div><div id="wName" style="font-size:30px;font-weight:600;margin-top:2px"></div></div></div>
+<div id="hint" hidden></div>
+<div class="toast" id="toast" hidden role="status"></div>
+<div class="tip" id="tip" hidden></div>
+<div id="dow" hidden></div>
+<div id="qcat" hidden role="dialog" aria-modal="true" aria-labelledby="qcT"><div class="box">
+  <div id="qcT" style="font-size:17px;font-weight:600">Nova categoria</div>
+  <div class="note" style="margin-top:6px">Ela já fica disponível em todo o app.</div>
+  <div style="margin-top:14px"><label for="qcName">Nome</label><input id="qcName" maxlength="30" placeholder="Ex.: Saúde do meu filho" autocomplete="off"></div>
+  <div style="margin-top:12px"><label>Cor</label><div class="sw" id="qcSw"></div></div>
+  <div class="err" id="qcMsg" role="alert"></div>
+  <div class="row" style="margin-top:14px"><button type="button" class="btn" id="qcOk">Criar categoria</button><button type="button" class="btn ghost" id="qcNo">Cancelar</button></div>
+</div></div>
+<div id="vmode" hidden role="dialog" aria-modal="true" aria-labelledby="vmT"><div class="box">
+  <div id="vmT" class="vmt">Modo de visualização</div>
+  <div class="note" style="margin-top:6px">Escolha como o Início aparece. Você pode mudar quando quiser.</div>
+  <div class="vmopts" role="radiogroup" aria-labelledby="vmT">
+    <button type="button" class="vmo" role="radio" aria-checked="false" data-m="completa"><span class="vmp" aria-hidden="true"><i class="a w9"></i><i class="w6"></i><i class="w9"></i><i class="w5"></i><i class="w9"></i><i class="w6"></i></span><span class="vmx"><b>Completa</b><span>Tudo o que o app mostra: resumo, renda comprometida, contas, dicas, sonhos, gráficos e indicadores.</span></span><span class="vmk" aria-hidden="true"></span></button>
+    <button type="button" class="vmo" role="radio" aria-checked="false" data-m="simples"><span class="vmp" aria-hidden="true"><i class="a w9"></i><i class="w9"></i><i class="w6"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="vmx"><b>Simples</b><span>Só o essencial: quanto você gastou, quanto sobrou, avisos, para onde foi o dinheiro e os últimos lançamentos.</span></span><span class="vmk" aria-hidden="true"></span></button>
+    <button type="button" class="vmo" role="radio" aria-checked="false" data-m="custom"><span class="vmp" aria-hidden="true"><i class="w9"></i><i class="a w6"></i><i class="w9"></i><i class="a w5"></i><i class=""></i><i class=""></i></span><span class="vmx"><b>Personalizar</b><span>Você escolhe o que aparece e em que ordem, e pode acrescentar blocos novos, como "Pode gastar por dia".</span></span><span class="vmk" aria-hidden="true"></span></button>
+  </div>
+  <div class="row"><button type="button" class="btn ghost sm" id="vmEdit" hidden>Editar meu Início</button><button type="button" class="btn ghost" id="vmNo">Fechar</button></div>
+</div></div>
+<div id="hedit" hidden role="dialog" aria-modal="true" aria-labelledby="heT">
+  <div class="hed-head"><button type="button" class="ib" id="heClose" aria-label="Fechar o editor">×</button><div id="heT">Personalizar o Início</div><button type="button" class="btn sm" id="heDone">Concluir</button></div>
+  <div class="hed-body">
+    <p class="note">Escolha o que aparece no Início e em que ordem. Arraste pela alça <b>⋮⋮</b>, use as setas ou o teclado. As mudanças valem na hora.</p>
+    <div class="hed-title"><h3>No Início <span class="mut" id="heN"></span></h3></div>
+    <ol id="heOn" class="hed-list" aria-label="Blocos que aparecem no Início, de cima para baixo"></ol>
+    <div class="note" id="heEmpty" hidden>Nenhum bloco no Início. Adicione abaixo o que quiser ver.</div>
+    <div class="hed-title"><h3>Para adicionar</h3></div>
+    <ul id="heOff" class="hed-list" aria-label="Blocos disponíveis para adicionar"></ul>
+    <div class="note" id="heOffEmpty" hidden>Todos os blocos já estão no Início.</div>
+    <div class="hed-foot"><button type="button" class="btn ghost sm" id="heStd">Restaurar a Completa</button><button type="button" class="btn ghost sm" id="heSimple">Começar do Simples</button></div>
+    <div id="heLive" class="sr" aria-live="polite"></div>
+  </div>
+</div>
+<div id="dlg" hidden role="dialog" aria-modal="true" aria-labelledby="dlgT"><div class="box">
+  <div id="dlgT" style="font-size:17px;font-weight:600">Confirmar exclusão</div>
+  <div class="note" id="dlgN" style="margin-top:6px"></div>
+  <div id="dlgList"></div>
+  <div style="display:flex;justify-content:space-between;font-weight:600;margin-bottom:14px"><span>Total a retirar do extrato</span><span id="dlgTotal"></span></div>
+  <div class="row"><button class="btn danger" id="dlgOk">Apagar definitivamente</button><button class="btn ghost" id="dlgNo">Voltar</button></div>
+</div></div>
+<!-- @app:start -->
+<script src="js/core/config.js"></script>
+<script src="js/core/utils.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/crypto.js"></script>
+<script src="js/core/period.js"></script>
+<script src="js/core/state.js"></script>
+<script src="js/features/categories.js"></script>
+<script src="js/features/rules.js"></script>
+<script src="js/features/entries.js"></script>
+<script src="js/features/money-input.js"></script>
+<script src="js/features/charts.js"></script>
+<script src="js/features/history.js"></script>
+<script src="js/features/dashboard.js"></script>
+<script src="js/features/month-picker.js"></script>
+<script src="js/features/calendar.js"></script>
+<script src="js/features/reports.js"></script>
+<script src="js/features/commitments.js"></script>
+<script src="js/features/commit-rate.js"></script>
+<script src="js/features/home-widgets.js"></script>
+<script src="js/features/home-layout.js"></script>
+<script src="js/features/cards.js"></script>
+<script src="js/features/accounts.js"></script>
+<script src="js/features/goals.js"></script>
+<script src="js/features/trash.js"></script>
+<script src="js/features/limits.js"></script>
+<script src="js/features/import-pdf.js"></script>
+<script src="js/features/import-files.js"></script>
+<script src="js/features/export-backup.js"></script>
+<script src="js/features/validation.js"></script>
+<script src="js/features/profile.js"></script>
+<script src="js/features/auth.js"></script>
+<script src="js/features/pin-lock.js"></script>
+<script src="js/features/privacy.js"></script>
+<script src="js/features/navigation.js"></script>
+<script src="js/features/render-hooks.js"></script>
+<script src="js/features/preferences.js"></script>
+<script src="js/features/theme.js"></script>
+<script src="js/features/tips-hints.js"></script>
+<script src="js/features/welcome.js"></script>
+<script src="js/features/tutorial.js"></script>
+<script src="js/features/data-status.js"></script>
+<script src="js/features/demo.js"></script>
+<script src="js/features/assistant-parser.js"></script>
+<script src="js/features/assistant-ui.js"></script>
+<script src="js/features/pwa.js"></script>
+<script src="js/main.js"></script>
+<!-- @app:end -->
+</body>
+</html>

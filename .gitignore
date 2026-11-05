@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+# NUNCA suba faturas ou extratos reais para o GitHub: têm seus dados pessoais.
+tests/fixtures/*.pdf
+tests/fixtures/*.ofx
+tests/fixtures/*.csv
+.env
+.env.*
+
+# Lista local de termos que NUNCA podem aparecer no código (seu nome, CPF, rua...). Lida por npm run check:release.
+.release-block.txt
+
+# capturas do teste em navegador
+tests/browser/out/

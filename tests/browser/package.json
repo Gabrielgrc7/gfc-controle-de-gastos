@@ -1,0 +1,12 @@
+{
+  "name": "gfc-e2e",
+  "private": true,
+  "description": "Teste de ponta a ponta em Chromium de verdade (instalado \u00e0 parte para n\u00e3o pesar no npm install principal).",
+  "scripts": {
+    "e2e": "node e2e.js"
+  },
+  "dependencies": {
+    "@sparticuz/chromium": "153.0.0",
+    "puppeteer-core": "25.16.0"
+  }
+}
